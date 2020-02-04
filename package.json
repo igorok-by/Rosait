@@ -1,0 +1,24 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "Test module",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run watch:all",
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
+    "build": "postcss css/main.css -u autoprefixer -d css/"
+  },
+  "author": "Igor B",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.13.1",
+    "onchange": "^5.2.0",
+    "parallelshell": "^3.0.2",
+    "postcss-cli": "^6.1.3"
+  }
+}
