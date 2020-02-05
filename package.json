@@ -9,7 +9,7 @@
     "scss": "node-sass -o css/ css/",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
     "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
-    "build": "postcss css/main.css -u autoprefixer -d css/"
+    "build": "postcss css/style.css -u autoprefixer -d css/"
   },
   "author": "Igor B",
   "license": "ISC",
